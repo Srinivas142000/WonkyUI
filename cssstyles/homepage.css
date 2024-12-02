@@ -1,0 +1,210 @@
+.button-placement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.transparent-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.transparent-button button {
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.transparent-button button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.instruction-pane {
+    text-align: center;
+    text-size-adjust: 100px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+}
+
+.disappearName {
+    transition: opacity 1s, visibility 1s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.disappearName.disappear {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.random-prompt {
+    text-align: center;
+    text-decoration: solid;
+}
+
+.text-holder-parent {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-holder {
+    align-items: center;
+    text-align: center;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+}
+
+.text-holder button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text-holder button:hover {
+    background-color: darkgreen;
+}
+
+.transparent-button-robotcheck button{
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.char-select-parent {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.char-select {
+    align-items: center;
+    text-align: center;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+}
+
+.final-text {
+    text-align: center;
+    text-shadow: 1px;
+    text-decoration-color: red;
+}
+
+.hint1-text {
+    text-align: center;
+    text-decoration: dashed;
+    border-style: solid;
+    width: auto;
+    align-items: center;
+}
+
+.hint2-text {
+    text-align: center;
+    text-decoration: dashed;
+    border-style: solid;
+    width: fit-content;
+    align-items: center;
+}
+
+
+.scratch-card {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    background: #ccc;
+    width: 100%;
+  }
+  
+  .scratch-card h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  .scratch-card.scratched h3 {
+    color: #000;
+  }
+  
+  .scratch-card:before {
+    content: '';
+    position: absolute;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/c/cd/Scratch_card_silver.jpg') repeat;
+    background-size: 30px 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .scratch-card.scratched:before {
+    display: none;
+  }
+  
+  .scratch-card:hover h3 {
+    visibility: hidden;
+    opacity: 0;
+  }
